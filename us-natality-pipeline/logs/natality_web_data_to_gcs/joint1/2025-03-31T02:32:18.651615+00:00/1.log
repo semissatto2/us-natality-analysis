@@ -1,0 +1,27 @@
+[2025-03-31 02:32:27,468] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: natality_web_data_to_gcs.joint1 manual__2025-03-31T02:32:18.651615+00:00 [queued]>
+[2025-03-31 02:32:27,493] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: natality_web_data_to_gcs.joint1 manual__2025-03-31T02:32:18.651615+00:00 [queued]>
+[2025-03-31 02:32:27,493] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2025-03-31 02:32:27,493] {taskinstance.py:1239} INFO - Starting attempt 1 of 1
+[2025-03-31 02:32:27,493] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2025-03-31 02:32:27,511] {taskinstance.py:1259} INFO - Executing <Task(BashOperator): joint1> on 2025-03-31 02:32:18.651615+00:00
+[2025-03-31 02:32:27,527] {standard_task_runner.py:52} INFO - Started process 1596 to run task
+[2025-03-31 02:32:27,533] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'natality_web_data_to_gcs', 'joint1', 'manual__2025-03-31T02:32:18.651615+00:00', '--job-id', '579', '--raw', '--subdir', 'DAGS_FOLDER/bigquery_to_gcs.py', '--cfg-path', '/tmp/tmpvpatadvi', '--error-file', '/tmp/tmpoy54i6t_']
+[2025-03-31 02:32:27,538] {standard_task_runner.py:77} INFO - Job 579: Subtask joint1
+[2025-03-31 02:32:27,645] {logging_mixin.py:109} INFO - Running <TaskInstance: natality_web_data_to_gcs.joint1 manual__2025-03-31T02:32:18.651615+00:00 [running]> on host 65c454f46b2f
+[2025-03-31 02:32:27,754] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=natality_web_data_to_gcs
+AIRFLOW_CTX_TASK_ID=joint1
+AIRFLOW_CTX_EXECUTION_DATE=2025-03-31T02:32:18.651615+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-03-31T02:32:18.651615+00:00
+[2025-03-31 02:32:27,756] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2025-03-31 02:32:27,757] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'echo "Joint!"']
+[2025-03-31 02:32:27,785] {subprocess.py:85} INFO - Output:
+[2025-03-31 02:32:27,788] {subprocess.py:89} INFO - Joint!
+[2025-03-31 02:32:27,789] {subprocess.py:93} INFO - Command exited with return code 0
+[2025-03-31 02:32:27,837] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=natality_web_data_to_gcs, task_id=joint1, execution_date=20250331T023218, start_date=20250331T023227, end_date=20250331T023227
+[2025-03-31 02:32:27,876] {local_task_job.py:154} INFO - Task exited with return code 0
+[2025-03-31 02:32:27,966] {local_task_job.py:264} INFO - 2 downstream tasks scheduled from follow-on schedule check

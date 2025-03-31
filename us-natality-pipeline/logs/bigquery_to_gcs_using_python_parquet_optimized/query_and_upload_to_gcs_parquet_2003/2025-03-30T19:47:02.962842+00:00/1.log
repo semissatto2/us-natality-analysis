@@ -1,0 +1,125 @@
+[2025-03-30 19:47:04,958] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: bigquery_to_gcs_using_python_parquet_optimized.query_and_upload_to_gcs_parquet_2003 manual__2025-03-30T19:47:02.962842+00:00 [queued]>
+[2025-03-30 19:47:04,970] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: bigquery_to_gcs_using_python_parquet_optimized.query_and_upload_to_gcs_parquet_2003 manual__2025-03-30T19:47:02.962842+00:00 [queued]>
+[2025-03-30 19:47:04,971] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2025-03-30 19:47:04,971] {taskinstance.py:1239} INFO - Starting attempt 1 of 1
+[2025-03-30 19:47:04,971] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2025-03-30 19:47:04,986] {taskinstance.py:1259} INFO - Executing <Task(PythonOperator): query_and_upload_to_gcs_parquet_2003> on 2025-03-30 19:47:02.962842+00:00
+[2025-03-30 19:47:05,001] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'bigquery_to_gcs_using_python_parquet_optimized', 'query_and_upload_to_gcs_parquet_2003', 'manual__2025-03-30T19:47:02.962842+00:00', '--job-id', '25', '--raw', '--subdir', 'DAGS_FOLDER/bigquery_to_gcs.py', '--cfg-path', '/tmp/tmpy97vowny', '--error-file', '/tmp/tmpjaivflzr']
+[2025-03-30 19:47:05,003] {standard_task_runner.py:77} INFO - Job 25: Subtask query_and_upload_to_gcs_parquet_2003
+[2025-03-30 19:47:04,996] {standard_task_runner.py:52} INFO - Started process 6967 to run task
+[2025-03-30 19:47:05,126] {logging_mixin.py:109} INFO - Running <TaskInstance: bigquery_to_gcs_using_python_parquet_optimized.query_and_upload_to_gcs_parquet_2003 manual__2025-03-30T19:47:02.962842+00:00 [running]> on host f5b8902f5cd8
+[2025-03-30 19:47:05,185] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=bigquery_to_gcs_using_python_parquet_optimized
+AIRFLOW_CTX_TASK_ID=query_and_upload_to_gcs_parquet_2003
+AIRFLOW_CTX_EXECUTION_DATE=2025-03-30T19:47:02.962842+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-03-30T19:47:02.962842+00:00
+[2025-03-30 19:47:05,190] {warnings.py:99} WARNING - /home/***/.local/lib/python3.6/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2025-03-30 19:47:05,191] {warnings.py:99} WARNING - /home/***/.local/lib/python3.6/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'next_ds' from the template is deprecated and will be removed in a future version. Please use '{{ data_interval_end | ds }}' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2025-03-30 19:47:05,191] {warnings.py:99} WARNING - /home/***/.local/lib/python3.6/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'next_ds_nodash' from the template is deprecated and will be removed in a future version. Please use '{{ data_interval_end | ds_nodash }}' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2025-03-30 19:47:05,191] {warnings.py:99} WARNING - /home/***/.local/lib/python3.6/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'next_execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_end' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2025-03-30 19:47:05,191] {warnings.py:99} WARNING - /home/***/.local/lib/python3.6/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_ds' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2025-03-30 19:47:05,192] {warnings.py:99} WARNING - /home/***/.local/lib/python3.6/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_ds_nodash' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2025-03-30 19:47:05,192] {warnings.py:99} WARNING - /home/***/.local/lib/python3.6/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_execution_date' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2025-03-30 19:47:05,192] {warnings.py:99} WARNING - /home/***/.local/lib/python3.6/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'prev_execution_date_success' from the template is deprecated and will be removed in a future version. Please use 'prev_data_interval_start_success' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2025-03-30 19:47:05,192] {warnings.py:99} WARNING - /home/***/.local/lib/python3.6/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'tomorrow_ds' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2025-03-30 19:47:05,192] {warnings.py:99} WARNING - /home/***/.local/lib/python3.6/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'tomorrow_ds_nodash' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2025-03-30 19:47:05,192] {warnings.py:99} WARNING - /home/***/.local/lib/python3.6/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'yesterday_ds' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2025-03-30 19:47:05,192] {warnings.py:99} WARNING - /home/***/.local/lib/python3.6/site-packages/***/utils/context.py:152: AirflowContextDeprecationWarning: Accessing 'yesterday_ds_nodash' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2025-03-30 19:47:05,927] {logging_mixin.py:109} INFO - result Row((2003, 11, None, 'AK', 39, False, 7.7492485093), {'year': 0, 'month': 1, 'child_race': 2, 'state': 3, 'gestation_weeks': 4, 'is_male': 5, 'weight_pounds': 6})
+[2025-03-30 19:47:05,927] {logging_mixin.py:109} INFO - result.values() (2003, 11, None, 'AK', 39, False, 7.7492485093)
+[2025-03-30 19:47:05,928] {logging_mixin.py:109} INFO - result Row((2003, 12, None, 'AK', 39, True, 8.80967198952), {'year': 0, 'month': 1, 'child_race': 2, 'state': 3, 'gestation_weeks': 4, 'is_male': 5, 'weight_pounds': 6})
+[2025-03-30 19:47:05,928] {logging_mixin.py:109} INFO - result.values() (2003, 12, None, 'AK', 39, True, 8.80967198952)
+[2025-03-30 19:47:05,928] {logging_mixin.py:109} INFO - result Row((2003, 7, None, 'AK', 40, True, 7.1870697412), {'year': 0, 'month': 1, 'child_race': 2, 'state': 3, 'gestation_weeks': 4, 'is_male': 5, 'weight_pounds': 6})
+[2025-03-30 19:47:05,928] {logging_mixin.py:109} INFO - result.values() (2003, 7, None, 'AK', 40, True, 7.1870697412)
+[2025-03-30 19:47:05,928] {logging_mixin.py:109} INFO - result Row((2003, 9, None, 'AK', 38, False, 6.8122838958), {'year': 0, 'month': 1, 'child_race': 2, 'state': 3, 'gestation_weeks': 4, 'is_male': 5, 'weight_pounds': 6})
+[2025-03-30 19:47:05,929] {logging_mixin.py:109} INFO - result.values() (2003, 9, None, 'AK', 38, False, 6.8122838958)
+[2025-03-30 19:47:05,929] {logging_mixin.py:109} INFO - result Row((2003, 2, None, 'AK', 38, True, 6.06050758238), {'year': 0, 'month': 1, 'child_race': 2, 'state': 3, 'gestation_weeks': 4, 'is_male': 5, 'weight_pounds': 6})
+[2025-03-30 19:47:05,929] {logging_mixin.py:109} INFO - result.values() (2003, 2, None, 'AK', 38, True, 6.06050758238)
+[2025-03-30 19:47:05,929] {logging_mixin.py:109} INFO - result Row((2003, 10, None, 'AK', 39, False, 8.68400850018), {'year': 0, 'month': 1, 'child_race': 2, 'state': 3, 'gestation_weeks': 4, 'is_male': 5, 'weight_pounds': 6})
+[2025-03-30 19:47:05,929] {logging_mixin.py:109} INFO - result.values() (2003, 10, None, 'AK', 39, False, 8.68400850018)
+[2025-03-30 19:47:05,929] {logging_mixin.py:109} INFO - result Row((2003, 9, None, 'AK', 32, False, 6.4992274837599995), {'year': 0, 'month': 1, 'child_race': 2, 'state': 3, 'gestation_weeks': 4, 'is_male': 5, 'weight_pounds': 6})
+[2025-03-30 19:47:05,930] {logging_mixin.py:109} INFO - result.values() (2003, 9, None, 'AK', 32, False, 6.4992274837599995)
+[2025-03-30 19:47:05,930] {logging_mixin.py:109} INFO - result Row((2003, 12, None, 'AK', 40, False, 5.74965579296), {'year': 0, 'month': 1, 'child_race': 2, 'state': 3, 'gestation_weeks': 4, 'is_male': 5, 'weight_pounds': 6})
+[2025-03-30 19:47:05,930] {logging_mixin.py:109} INFO - result.values() (2003, 12, None, 'AK', 40, False, 5.74965579296)
+[2025-03-30 19:47:05,930] {logging_mixin.py:109} INFO - result Row((2003, 2, None, 'AK', 40, True, 7.62358501996), {'year': 0, 'month': 1, 'child_race': 2, 'state': 3, 'gestation_weeks': 4, 'is_male': 5, 'weight_pounds': 6})
+[2025-03-30 19:47:05,930] {logging_mixin.py:109} INFO - result.values() (2003, 2, None, 'AK', 40, True, 7.62358501996)
+[2025-03-30 19:47:05,930] {logging_mixin.py:109} INFO - result Row((2003, 9, None, 'AK', 39, False, 5.71879107628), {'year': 0, 'month': 1, 'child_race': 2, 'state': 3, 'gestation_weeks': 4, 'is_male': 5, 'weight_pounds': 6})
+[2025-03-30 19:47:05,930] {logging_mixin.py:109} INFO - result.values() (2003, 9, None, 'AK', 39, False, 5.71879107628)
+[2025-03-30 19:47:05,931] {taskinstance.py:1700} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1329, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1455, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1511, in _execute_task
+    result = execute_callable(context=context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 174, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 185, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/bigquery_to_gcs.py", line 57, in query_to_gcs
+    rows = [list(result.values()) for result in results]
+  File "/home/airflow/.local/lib/python3.6/site-packages/google/api_core/page_iterator.py", line 229, in __iter__
+    raise ValueError("Iterator has already started", self)
+ValueError: ('Iterator has already started', <google.cloud.bigquery.table.RowIterator object at 0x7f6d40af5ef0>)
+[2025-03-30 19:47:05,976] {taskinstance.py:1277} INFO - Marking task as FAILED. dag_id=bigquery_to_gcs_using_python_parquet_optimized, task_id=query_and_upload_to_gcs_parquet_2003, execution_date=20250330T194702, start_date=20250330T194704, end_date=20250330T194705
+[2025-03-30 19:47:05,997] {standard_task_runner.py:92} ERROR - Failed to execute job 25 for task query_and_upload_to_gcs_parquet_2003
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/task/task_runner/standard_task_runner.py", line 85, in _start_by_fork
+    args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/cli/cli_parser.py", line 48, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/utils/cli.py", line 92, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/cli/commands/task_command.py", line 298, in task_run
+    _run_task_by_selected_method(args, dag, ti)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/cli/commands/task_command.py", line 107, in _run_task_by_selected_method
+    _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/cli/commands/task_command.py", line 184, in _run_raw_task
+    error_file=args.error_file,
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/utils/session.py", line 70, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1329, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1455, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1511, in _execute_task
+    result = execute_callable(context=context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 174, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 185, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/bigquery_to_gcs.py", line 57, in query_to_gcs
+    rows = [list(result.values()) for result in results]
+  File "/home/airflow/.local/lib/python3.6/site-packages/google/api_core/page_iterator.py", line 229, in __iter__
+    raise ValueError("Iterator has already started", self)
+ValueError: ('Iterator has already started', <google.cloud.bigquery.table.RowIterator object at 0x7f6d40af5ef0>)
+[2025-03-30 19:47:06,041] {local_task_job.py:154} INFO - Task exited with return code 1
+[2025-03-30 19:47:06,083] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check

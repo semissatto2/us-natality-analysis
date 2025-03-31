@@ -1,0 +1,63 @@
+[2025-03-30 21:58:37,752] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: natality_web_data_to_gcs.download_race_lookup manual__2025-03-30T21:58:23.756315+00:00 [queued]>
+[2025-03-30 21:58:38,007] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: natality_web_data_to_gcs.download_race_lookup manual__2025-03-30T21:58:23.756315+00:00 [queued]>
+[2025-03-30 21:58:38,023] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2025-03-30 21:58:38,023] {taskinstance.py:1239} INFO - Starting attempt 1 of 1
+[2025-03-30 21:58:38,023] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2025-03-30 21:58:38,378] {taskinstance.py:1259} INFO - Executing <Task(BashOperator): download_race_lookup> on 2025-03-30 21:58:23.756315+00:00
+[2025-03-30 21:58:38,459] {standard_task_runner.py:52} INFO - Started process 13684 to run task
+[2025-03-30 21:58:38,670] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'natality_web_data_to_gcs', 'download_race_lookup', 'manual__2025-03-30T21:58:23.756315+00:00', '--job-id', '73', '--raw', '--subdir', 'DAGS_FOLDER/bigquery_to_gcs.py', '--cfg-path', '/tmp/tmpxvymm9_b', '--error-file', '/tmp/tmp3trk0nf2']
+[2025-03-30 21:58:38,743] {standard_task_runner.py:77} INFO - Job 73: Subtask download_race_lookup
+[2025-03-30 21:58:40,052] {logging_mixin.py:109} INFO - Running <TaskInstance: natality_web_data_to_gcs.download_race_lookup manual__2025-03-30T21:58:23.756315+00:00 [running]> on host f5b8902f5cd8
+[2025-03-30 21:58:40,573] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=natality_web_data_to_gcs
+AIRFLOW_CTX_TASK_ID=download_race_lookup
+AIRFLOW_CTX_EXECUTION_DATE=2025-03-30T21:58:23.756315+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-03-30T21:58:23.756315+00:00
+[2025-03-30 21:58:40,620] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2025-03-30 21:58:40,692] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'wget --no-check-certificate "https://drive.google.com/file/d/17o8e1eh7XkHk61P5JuBAi2JhFvnUt4tJ/view?usp=drive_link" -O /tmp/race_lookup.csv']
+[2025-03-30 21:58:40,744] {subprocess.py:85} INFO - Output:
+[2025-03-30 21:58:40,749] {subprocess.py:89} INFO - bash: wget: command not found
+[2025-03-30 21:58:40,751] {subprocess.py:93} INFO - Command exited with return code 127
+[2025-03-30 21:58:40,937] {taskinstance.py:1700} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1329, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1455, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1511, in _execute_task
+    result = execute_callable(context=context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/bash.py", line 188, in execute
+    f'Bash command failed. The command returned a non-zero exit code {result.exit_code}.'
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 127.
+[2025-03-30 21:58:41,177] {taskinstance.py:1277} INFO - Marking task as FAILED. dag_id=natality_web_data_to_gcs, task_id=download_race_lookup, execution_date=20250330T215823, start_date=20250330T215837, end_date=20250330T215841
+[2025-03-30 21:58:41,554] {standard_task_runner.py:92} ERROR - Failed to execute job 73 for task download_race_lookup
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/task/task_runner/standard_task_runner.py", line 85, in _start_by_fork
+    args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/cli/cli_parser.py", line 48, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/utils/cli.py", line 92, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/cli/commands/task_command.py", line 298, in task_run
+    _run_task_by_selected_method(args, dag, ti)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/cli/commands/task_command.py", line 107, in _run_task_by_selected_method
+    _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/cli/commands/task_command.py", line 184, in _run_raw_task
+    error_file=args.error_file,
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/utils/session.py", line 70, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1329, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1455, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1511, in _execute_task
+    result = execute_callable(context=context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/bash.py", line 188, in execute
+    f'Bash command failed. The command returned a non-zero exit code {result.exit_code}.'
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 127.
+[2025-03-30 21:58:41,809] {local_task_job.py:154} INFO - Task exited with return code 1
+[2025-03-30 21:58:42,486] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check

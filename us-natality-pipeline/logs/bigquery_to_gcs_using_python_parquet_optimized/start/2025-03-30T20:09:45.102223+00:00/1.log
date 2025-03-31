@@ -1,0 +1,27 @@
+[2025-03-30 20:09:46,604] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: bigquery_to_gcs_using_python_parquet_optimized.start manual__2025-03-30T20:09:45.102223+00:00 [queued]>
+[2025-03-30 20:09:46,618] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: bigquery_to_gcs_using_python_parquet_optimized.start manual__2025-03-30T20:09:45.102223+00:00 [queued]>
+[2025-03-30 20:09:46,618] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2025-03-30 20:09:46,618] {taskinstance.py:1239} INFO - Starting attempt 1 of 1
+[2025-03-30 20:09:46,619] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2025-03-30 20:09:46,635] {taskinstance.py:1259} INFO - Executing <Task(BashOperator): start> on 2025-03-30 20:09:45.102223+00:00
+[2025-03-30 20:09:46,647] {standard_task_runner.py:52} INFO - Started process 8006 to run task
+[2025-03-30 20:09:46,652] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'bigquery_to_gcs_using_python_parquet_optimized', 'start', 'manual__2025-03-30T20:09:45.102223+00:00', '--job-id', '39', '--raw', '--subdir', 'DAGS_FOLDER/bigquery_to_gcs.py', '--cfg-path', '/tmp/tmpkairtcox', '--error-file', '/tmp/tmpws29av8i']
+[2025-03-30 20:09:46,657] {standard_task_runner.py:77} INFO - Job 39: Subtask start
+[2025-03-30 20:09:46,747] {logging_mixin.py:109} INFO - Running <TaskInstance: bigquery_to_gcs_using_python_parquet_optimized.start manual__2025-03-30T20:09:45.102223+00:00 [running]> on host f5b8902f5cd8
+[2025-03-30 20:09:46,824] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=bigquery_to_gcs_using_python_parquet_optimized
+AIRFLOW_CTX_TASK_ID=start
+AIRFLOW_CTX_EXECUTION_DATE=2025-03-30T20:09:45.102223+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-03-30T20:09:45.102223+00:00
+[2025-03-30 20:09:46,829] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2025-03-30 20:09:46,830] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'echo "Started!"']
+[2025-03-30 20:09:46,854] {subprocess.py:85} INFO - Output:
+[2025-03-30 20:09:46,856] {subprocess.py:89} INFO - Started!
+[2025-03-30 20:09:46,856] {subprocess.py:93} INFO - Command exited with return code 0
+[2025-03-30 20:09:46,899] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=bigquery_to_gcs_using_python_parquet_optimized, task_id=start, execution_date=20250330T200945, start_date=20250330T200946, end_date=20250330T200946
+[2025-03-30 20:09:46,952] {local_task_job.py:154} INFO - Task exited with return code 0
+[2025-03-30 20:09:47,016] {local_task_job.py:264} INFO - 12 downstream tasks scheduled from follow-on schedule check

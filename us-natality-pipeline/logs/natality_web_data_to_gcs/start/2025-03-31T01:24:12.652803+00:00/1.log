@@ -1,0 +1,27 @@
+[2025-03-31 01:24:14,390] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: natality_web_data_to_gcs.start manual__2025-03-31T01:24:12.652803+00:00 [queued]>
+[2025-03-31 01:24:14,414] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: natality_web_data_to_gcs.start manual__2025-03-31T01:24:12.652803+00:00 [queued]>
+[2025-03-31 01:24:14,415] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2025-03-31 01:24:14,415] {taskinstance.py:1239} INFO - Starting attempt 1 of 1
+[2025-03-31 01:24:14,415] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2025-03-31 01:24:14,439] {taskinstance.py:1259} INFO - Executing <Task(BashOperator): start> on 2025-03-31 01:24:12.652803+00:00
+[2025-03-31 01:24:14,453] {standard_task_runner.py:52} INFO - Started process 6296 to run task
+[2025-03-31 01:24:14,458] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'natality_web_data_to_gcs', 'start', 'manual__2025-03-31T01:24:12.652803+00:00', '--job-id', '365', '--raw', '--subdir', 'DAGS_FOLDER/bigquery_to_gcs.py', '--cfg-path', '/tmp/tmpx43w5cua', '--error-file', '/tmp/tmpg26avfz3']
+[2025-03-31 01:24:14,462] {standard_task_runner.py:77} INFO - Job 365: Subtask start
+[2025-03-31 01:24:14,555] {logging_mixin.py:109} INFO - Running <TaskInstance: natality_web_data_to_gcs.start manual__2025-03-31T01:24:12.652803+00:00 [running]> on host 3341a2d56eeb
+[2025-03-31 01:24:14,655] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=natality_web_data_to_gcs
+AIRFLOW_CTX_TASK_ID=start
+AIRFLOW_CTX_EXECUTION_DATE=2025-03-31T01:24:12.652803+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-03-31T01:24:12.652803+00:00
+[2025-03-31 01:24:14,657] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2025-03-31 01:24:14,658] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'echo "Started!"']
+[2025-03-31 01:24:14,686] {subprocess.py:85} INFO - Output:
+[2025-03-31 01:24:14,688] {subprocess.py:89} INFO - Started!
+[2025-03-31 01:24:14,689] {subprocess.py:93} INFO - Command exited with return code 0
+[2025-03-31 01:24:14,745] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=natality_web_data_to_gcs, task_id=start, execution_date=20250331T012412, start_date=20250331T012414, end_date=20250331T012414
+[2025-03-31 01:24:14,799] {local_task_job.py:154} INFO - Task exited with return code 0
+[2025-03-31 01:24:14,882] {local_task_job.py:264} INFO - 2 downstream tasks scheduled from follow-on schedule check

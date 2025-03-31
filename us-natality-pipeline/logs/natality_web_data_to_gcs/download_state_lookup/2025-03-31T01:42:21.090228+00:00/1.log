@@ -1,0 +1,42 @@
+[2025-03-31 01:42:25,483] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: natality_web_data_to_gcs.download_state_lookup manual__2025-03-31T01:42:21.090228+00:00 [queued]>
+[2025-03-31 01:42:25,503] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: natality_web_data_to_gcs.download_state_lookup manual__2025-03-31T01:42:21.090228+00:00 [queued]>
+[2025-03-31 01:42:25,504] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2025-03-31 01:42:25,504] {taskinstance.py:1239} INFO - Starting attempt 1 of 1
+[2025-03-31 01:42:25,504] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2025-03-31 01:42:25,527] {taskinstance.py:1259} INFO - Executing <Task(BashOperator): download_state_lookup> on 2025-03-31 01:42:21.090228+00:00
+[2025-03-31 01:42:25,537] {standard_task_runner.py:52} INFO - Started process 7748 to run task
+[2025-03-31 01:42:25,542] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'natality_web_data_to_gcs', 'download_state_lookup', 'manual__2025-03-31T01:42:21.090228+00:00', '--job-id', '435', '--raw', '--subdir', 'DAGS_FOLDER/bigquery_to_gcs.py', '--cfg-path', '/tmp/tmp593xmr2x', '--error-file', '/tmp/tmpdkp8cydz']
+[2025-03-31 01:42:25,547] {standard_task_runner.py:77} INFO - Job 435: Subtask download_state_lookup
+[2025-03-31 01:42:25,658] {logging_mixin.py:109} INFO - Running <TaskInstance: natality_web_data_to_gcs.download_state_lookup manual__2025-03-31T01:42:21.090228+00:00 [running]> on host 3341a2d56eeb
+[2025-03-31 01:42:25,793] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=natality_web_data_to_gcs
+AIRFLOW_CTX_TASK_ID=download_state_lookup
+AIRFLOW_CTX_EXECUTION_DATE=2025-03-31T01:42:21.090228+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-03-31T01:42:21.090228+00:00
+[2025-03-31 01:42:25,796] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2025-03-31 01:42:25,797] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'wget --no-check-certificate "https://docs.google.com/uc?export=download&id=1dsVF__ZPD-40eZLVhedrGn-wWDCJX6bU" -O /tmp/state_lookup.csv']
+[2025-03-31 01:42:25,832] {subprocess.py:85} INFO - Output:
+[2025-03-31 01:42:25,843] {subprocess.py:89} INFO - --2025-03-31 01:42:25--  https://docs.google.com/uc?export=download&id=1dsVF__ZPD-40eZLVhedrGn-wWDCJX6bU
+[2025-03-31 01:42:25,858] {subprocess.py:89} INFO - Resolving docs.google.com (docs.google.com)... 74.125.132.101, 74.125.132.138, 74.125.132.139, ...
+[2025-03-31 01:42:25,860] {subprocess.py:89} INFO - Connecting to docs.google.com (docs.google.com)|74.125.132.101|:443... connected.
+[2025-03-31 01:42:25,950] {subprocess.py:89} INFO - HTTP request sent, awaiting response... 303 See Other
+[2025-03-31 01:42:25,952] {subprocess.py:89} INFO - Location: https://drive.usercontent.google.com/download?id=1dsVF__ZPD-40eZLVhedrGn-wWDCJX6bU&export=download [following]
+[2025-03-31 01:42:25,952] {subprocess.py:89} INFO - --2025-03-31 01:42:25--  https://drive.usercontent.google.com/download?id=1dsVF__ZPD-40eZLVhedrGn-wWDCJX6bU&export=download
+[2025-03-31 01:42:25,959] {subprocess.py:89} INFO - Resolving drive.usercontent.google.com (drive.usercontent.google.com)... 209.85.200.132, 2607:f8b0:4001:c16::84
+[2025-03-31 01:42:25,961] {subprocess.py:89} INFO - Connecting to drive.usercontent.google.com (drive.usercontent.google.com)|209.85.200.132|:443... connected.
+[2025-03-31 01:42:28,109] {subprocess.py:89} INFO - HTTP request sent, awaiting response... 200 OK
+[2025-03-31 01:42:28,109] {subprocess.py:89} INFO - Length: 632 [application/octet-stream]
+[2025-03-31 01:42:28,110] {subprocess.py:89} INFO - Saving to: ‘/tmp/state_lookup.csv’
+[2025-03-31 01:42:28,110] {subprocess.py:89} INFO - 
+[2025-03-31 01:42:28,111] {subprocess.py:89} INFO -      0K                                                       100% 22.5M=0s
+[2025-03-31 01:42:28,111] {subprocess.py:89} INFO - 
+[2025-03-31 01:42:28,111] {subprocess.py:89} INFO - 2025-03-31 01:42:28 (22.5 MB/s) - ‘/tmp/state_lookup.csv’ saved [632/632]
+[2025-03-31 01:42:28,112] {subprocess.py:89} INFO - 
+[2025-03-31 01:42:28,112] {subprocess.py:93} INFO - Command exited with return code 0
+[2025-03-31 01:42:28,174] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=natality_web_data_to_gcs, task_id=download_state_lookup, execution_date=20250331T014221, start_date=20250331T014225, end_date=20250331T014228
+[2025-03-31 01:42:28,228] {local_task_job.py:154} INFO - Task exited with return code 0
+[2025-03-31 01:42:28,347] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check

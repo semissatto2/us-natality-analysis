@@ -1,0 +1,24 @@
+[2025-03-31 00:18:06,647] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: natality_web_data_to_gcs.upload_race_lookup manual__2025-03-31T00:17:55.051494+00:00 [queued]>
+[2025-03-31 00:18:06,665] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: natality_web_data_to_gcs.upload_race_lookup manual__2025-03-31T00:17:55.051494+00:00 [queued]>
+[2025-03-31 00:18:06,665] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2025-03-31 00:18:06,666] {taskinstance.py:1239} INFO - Starting attempt 1 of 1
+[2025-03-31 00:18:06,666] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2025-03-31 00:18:06,688] {taskinstance.py:1259} INFO - Executing <Task(PythonOperator): upload_race_lookup> on 2025-03-31 00:17:55.051494+00:00
+[2025-03-31 00:18:06,705] {standard_task_runner.py:52} INFO - Started process 2646 to run task
+[2025-03-31 00:18:06,720] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'natality_web_data_to_gcs', 'upload_race_lookup', 'manual__2025-03-31T00:17:55.051494+00:00', '--job-id', '279', '--raw', '--subdir', 'DAGS_FOLDER/bigquery_to_gcs.py', '--cfg-path', '/tmp/tmphxh3o2hi', '--error-file', '/tmp/tmpcbip2qbg']
+[2025-03-31 00:18:06,725] {standard_task_runner.py:77} INFO - Job 279: Subtask upload_race_lookup
+[2025-03-31 00:18:06,832] {logging_mixin.py:109} INFO - Running <TaskInstance: natality_web_data_to_gcs.upload_race_lookup manual__2025-03-31T00:17:55.051494+00:00 [running]> on host 3341a2d56eeb
+[2025-03-31 00:18:06,935] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=natality_web_data_to_gcs
+AIRFLOW_CTX_TASK_ID=upload_race_lookup
+AIRFLOW_CTX_EXECUTION_DATE=2025-03-31T00:17:55.051494+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-03-31T00:17:55.051494+00:00
+[2025-03-31 00:18:06,938] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2025-03-31 00:18:07,163] {gcs.py:486} INFO - File /tmp/race_lookup.csv uploaded to natality-lookup_tables/race_lookup.csv in us-natality-bucket bucket
+[2025-03-31 00:18:07,164] {python.py:175} INFO - Done. Returned value was: None
+[2025-03-31 00:18:07,185] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=natality_web_data_to_gcs, task_id=upload_race_lookup, execution_date=20250331T001755, start_date=20250331T001806, end_date=20250331T001807
+[2025-03-31 00:18:07,266] {local_task_job.py:154} INFO - Task exited with return code 0
+[2025-03-31 00:18:07,373] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check
