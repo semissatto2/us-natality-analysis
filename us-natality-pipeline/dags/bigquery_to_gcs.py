@@ -34,7 +34,6 @@ def build_query(month):
     SELECT year, month, child_race, state, gestation_weeks, is_male, weight_pounds
     FROM {TABLE_SOURCE}
     WHERE month = {month}
-    LIMIT 100
     """
     return query
 
