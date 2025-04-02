@@ -15,12 +15,12 @@ from airflow.utils.trigger_rule import TriggerRule
 
 # Variables
 TABLE_SOURCE = "`bigquery-public-data.samples.natality`"
-GCP_PROJECT_ID = os.environ.get("GCP_PROJECT_ID")
-GCP_GCS_BUCKET = os.environ.get("GCP_GCS_BUCKET")
+GCP_PROJECT_ID = os.environ.get("GCP_PROJECT_ID")  # TODO: Insert input here
+GCP_GCS_BUCKET = os.environ.get("GCP_GCS_BUCKET")  # TODO: Insert input here
 STATE_LOOKUP_URL = r"https://docs.google.com/uc?export=download&id=1dsVF__ZPD-40eZLVhedrGn-wWDCJX6bU"
 RACE_LOOKUP_URL = r"https://docs.google.com/uc?export=download&id=17o8e1eh7XkHk61P5JuBAi2JhFvnUt4tJ"
-GCP_CLUSTER_NAME = "us-natality-cluster"
-GCP_REGION = "us-central1"
+GCP_CLUSTER_NAME = "us-natality-cluster"  # TODO: Insert input here
+GCP_REGION = "us-central1"  # TODO: Insert input here
 LOCAL_PYSPARK_SCRIPT_PATH = "/opt/airflow/dags/pyspark_to_bq.py"
 GCP_PYSPARK_SCRIPT_PATH = f"scripts/pyspark_to_bq.py"
 GCP_PYSPARK_SCRIPT_FULLPATH = "gs://" + GCP_GCS_BUCKET + r"/" + GCP_PYSPARK_SCRIPT_PATH

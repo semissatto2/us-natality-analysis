@@ -62,9 +62,9 @@ x-airflow-common:
     AIRFLOW_CONN_GOOGLE_CLOUD_DEFAULT: 'google-cloud-platform://?extra__google_cloud_platform__key_path=/.google/credentials/google_credentials.json'
 
     # TODO: Please change GCP_PROJECT_ID & GCP_GCS_BUCKET, as per your config
-    GCP_PROJECT_ID: 'us-natality-455214' # TODO: insert the project id here
-    GCP_GCS_BUCKET: 'us-natality-bucket' # TODO: insert the GCS bucket here
-    BIGQUERY_DATASET: 'us_natality_dataset' # TODO: insert the BigQuery dataset here
+    GCP_PROJECT_ID: 'us-natality-455214'  # TODO: Insert input here
+    GCP_GCS_BUCKET: 'us-natality-bucket'  # TODO: Insert input here
+    BIGQUERY_DATASET: 'us_natality_dataset'  # TODO: Insert input here
 
   volumes:
     - ./dags:/opt/airflow/dags
